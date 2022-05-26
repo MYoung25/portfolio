@@ -1,4 +1,5 @@
 import { useState, MutableRefObject, useEffect, useRef, useMemo } from "react";
+import GitHubButton from 'react-github-btn'
 import styles from "../styles/background.module.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import randomStars from "./randomStars.json";
@@ -85,8 +86,11 @@ export function Background({ children }: { children?: JSX.Element }) {
       <ParallaxLayer offset={0.6} speed={0.2}>
         <div className={styles.mountains} />
         <div className={styles.content}>
-          <h2 className={styles.name}>Michael Young</h2>
-          <h3 className={styles.name}>
+          <h2 className={styles.name}>
+                <span>Michael Young</span>
+                <GitHubButton href="https://github.com/MYoung25" aria-label="@MYoung25 on GitHub">@MYoung25</GitHubButton>
+          </h2>
+          <h3 className={styles.tagline}>
             Learner. Environmentalist. Web Engineer.
           </h3>
         </div>

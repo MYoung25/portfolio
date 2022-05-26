@@ -23,7 +23,15 @@
 
 .name {
     margin-top: 0;
+    margin-bottom: 5px;
     padding-top: 10px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.tagline {
+    margin-top: 0;
     text-align: center;
 }
 

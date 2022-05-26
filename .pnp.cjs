@@ -43,6 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:12.1.6"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:18.1.0"],\
+            ["react-github-btn", "npm:1.3.0"],\
             ["sass", "npm:1.52.1"],\
             ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"]\
           ],\
@@ -1920,6 +1921,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["github-buttons", [\
+        ["npm:2.21.1", {\
+          "packageLocation": "./.yarn/cache/github-buttons-npm-2.21.1-557eb20da1-5c90dc19a9.zip/node_modules/github-buttons/",\
+          "packageDependencies": [\
+            ["github-buttons", "npm:2.21.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["glob", [\
         ["npm:7.1.7", {\
           "packageLocation": "./.yarn/cache/glob-npm-7.1.7-5698ad9c48-b61f48973b.zip/node_modules/glob/",\
@@ -3096,6 +3106,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:12.1.6"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:3786d9363fd0a547cdeba13dbbd7739095de182e2f1aa37c74f8398253205a5b62b2735c6799681aabf1f7716a4d0562fe89843678033b5bdce0191960fb23a9#npm:18.1.0"],\
+            ["react-github-btn", "npm:1.3.0"],\
             ["sass", "npm:1.52.1"],\
             ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"]\
           ],\
@@ -3216,6 +3227,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/react",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-github-btn", [\
+        ["npm:1.3.0", {\
+          "packageLocation": "./.yarn/cache/react-github-btn-npm-1.3.0-460aafad3f-8ad3193d7f.zip/node_modules/react-github-btn/",\
+          "packageDependencies": [\
+            ["react-github-btn", "npm:1.3.0"],\
+            ["github-buttons", "npm:2.21.1"]\
           ],\
           "linkType": "HARD"\
         }]\
