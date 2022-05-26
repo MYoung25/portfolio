@@ -1,5 +1,4 @@
 import { ParallaxLayer } from "@react-spring/parallax"
-import Image from 'next/image'
 import styles from '../../styles/studyhall.module.scss'
 
 const stack = [
@@ -19,7 +18,7 @@ export function StudyHall () {
                 <div className={styles.transition_container} />
                 <div className={styles.container}>
                     <a href="https://studyhall.org">
-                        <Image src="/studyhall/logo.svg" height="100px" width="400px" alt="StudyHall Logo" />
+                        <img src="/studyhall/logo.svg" height="100px" width="400px" alt="StudyHall Logo" />
                     </a>
                     <p className={styles.about}>
                         StudyHall offers free, virtual, one-on-one support through an Online Whiteboard tool to improve reading skills of students in need with qualified volunteer tutors. 
@@ -32,7 +31,7 @@ export function StudyHall () {
                     </h2>
                     <div className={styles.technologyUsed}>
                         {
-                            stack.map(({ src }) => (<Image src={src} key={src} alt={src} className={styles.stackIcon} height={60} width={100} />))
+                            stack.map(({ src }) => (<img src={src} key={src} alt={src} className={styles.stackIcon} />))
                         }
                     </div>
 
