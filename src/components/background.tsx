@@ -1,4 +1,4 @@
-import { useState, MutableRefObject, useEffect, useRef } from "react";
+import { useState, MutableRefObject, useEffect, useRef, useMemo } from "react";
 import styles from "./background.module.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import randomStars from './randomStars.json'
@@ -13,7 +13,7 @@ randomStars.forEach((number) => {
     });
 })
 
-export function Background() {
+export function Background ({ children }: { children: JSX.Element })  {
   const [scrollPosition, setScrollPosition] = useState(0);
   const ref = useRef(null);
 
@@ -34,7 +34,7 @@ export function Background() {
     }
   }, []);
 
-  let scrollPercent = 1 - scrollPosition / 1000;
+  let scrollPercent = useMemo(() => 1 - scrollPosition / 1000, [scrollPosition]);
 
   if (scrollPercent >= 1) {
     scrollPercent = .9999;
@@ -46,7 +46,7 @@ export function Background() {
 
   return (
     <Parallax ref={ref} pages={2} className='starry-sky-scroll-container'>
-      <ParallaxLayer speed={0} factor={.9}>
+      <ParallaxLayer speed={.1} factor={.9}>
           <div className={styles.starry_sky}>
             <svg viewBox="0 0 1000 1000" height="100%" width="100%">
                 {radiuses.map(({ c, r, cy, cx, rotate }) => (
@@ -70,13 +70,15 @@ export function Background() {
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={.6} speed={.15} factor={.4}>
+      <ParallaxLayer offset={.6} speed={.3}>
             <div className={styles.mountains} />
             <div className={styles.content}>
                 <h2 className={styles.name}>Michael Young</h2>
                 <h3 className={styles.name}>Learner. Environmentalist. Web Engineer.</h3>
             </div>
       </ParallaxLayer>
+
+      { children }
 
     </Parallax>
   );

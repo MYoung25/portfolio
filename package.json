@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "publish": "yarn build && yarn next export && wrangler pages publish ./out",
     "lint": "next lint"
   },
   "dependencies": {

@@ -4,31 +4,33 @@
 }
 
 .mountains {
-    background-image: url('/mountains_black_small.svg'), linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 90.1%);
+    background-image: url('/mountains_black_small.svg');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top;
-    height: 50%;
-}
-
-@media screen and (min-width: 376px) {
-    .mountains {
-        background-image: url('/mountains_long.svg'), linear-gradient(rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 1) 66%);
-        height: 50%;
-    }
+    background-position: bottom;
+    height: 200px;
 }
 
 .content {
     background-color: black;
+    background-image: linear-gradient(#000, #1D1F31);
     min-height: 200px;
-}
-
-.content_container {
-    background-color: black;
 }
 
 .name {
     margin-top: 0;
+    padding-top: 10px;
     text-align: center;
 }
 
+@media screen and (min-width: 500px) {
+    .mountains {
+        background-image: url('/mountains_long.svg');
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .content {
+        min-height: 525px;
+    }
+}
