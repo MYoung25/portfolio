@@ -15,7 +15,6 @@ export function StudyHall () {
     return (
         <>
             <ParallaxLayer offset={1} speed={.05}>
-                <div className={styles.transition_container} />
                 <div className={styles.container}>
                     <a href="https://studyhall.org">
                         <img src="/studyhall/logo.svg" height="100px" width="400px" alt="StudyHall Logo" />

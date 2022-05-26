@@ -4,15 +4,6 @@ $base-blue: rgba(238, 245, 251, 1);
 $base-red: #FBE2DE;
 $base-yellow: rgba(251, 239, 216, 1);
 
-.transition_container {
-    height: 155px;
-    background-image: url('/studyhall/to-studyhall.svg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    background-color: $base-blue;
-}
-
 .container {
     position: relative;
     top: -60px;
@@ -25,15 +16,18 @@ $base-yellow: rgba(251, 239, 216, 1);
     color: $studyhall-blue;
 }
 
-.container::after {
+.container::before, .container::after {
     content: "";
     background-color: $base-blue;
     background-image: url('/studyhall/to-studyhall.svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    height: 100px;
+    height: 155px;
     width: 100%;
+}
+
+.container::after {
     transform: rotate(.5turn);
 }
 
