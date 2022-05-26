@@ -1,15 +1,33 @@
+.starry_sky {
+    background: linear-gradient(#1D1F31, #3f446c);
+    height: 100%;
+}
+
 .mountains {
-    background-image: url('/mountains_black_small.svg');
+    background-image: url('/mountains_black_small.svg'), linear-gradient(rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 90.1%);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top right;
-    height: 100%;
+    background-position: top;
+    height: 50%;
+}
+
+@media screen and (min-width: 376px) {
+    .mountains {
+        background-image: url('/mountains_long.svg'), linear-gradient(rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 1) 66%);
+        height: 50%;
+    }
 }
 
 .content {
     background-color: black;
+    min-height: 200px;
+}
+
+.content_container {
+    background-color: black;
 }
 
 .name {
+    margin-top: 0;
     text-align: center;
 }

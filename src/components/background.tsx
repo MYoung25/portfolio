@@ -9,7 +9,7 @@ randomStars.forEach((number) => {
   radiuses.push({
         r: number,
         c: number * 2 * Math.PI,
-        rotate: (Math.random() * 80 - 10).toString() + 'deg',
+        rotate: (Math.random() * 270 - 100).toString() + 'deg',
     });
 })
 
@@ -20,12 +20,12 @@ export function Background() {
   const handleScroll = () => {
     let { current } = ref;
     if (current && (current as MutableRefObject<null>).current) {
-      setScrollPosition((current as MutableRefObject<null>).current as MutableRefObject);
+      setScrollPosition((current as MutableRefObject<null>).current as unknown as number);
     }
   };
 
   useEffect(() => {
-    const container: HTMLElement | null = document.querySelector(".starry-sky");
+    const container: HTMLElement | null = document.querySelector(".starry-sky-scroll-container");
     if (container) {
       container.addEventListener("scroll", handleScroll);
       return () => {
@@ -40,14 +40,14 @@ export function Background() {
     scrollPercent = .9999;
   }
 
-  if (scrollPercent <= .7) { 
-      scrollPercent = .7;
+  if (scrollPercent <= 0) { 
+      scrollPercent = 0;
   }
 
   return (
-    <Parallax ref={ref} pages={2} className="starry-sky">
+    <Parallax ref={ref} pages={2} className='starry-sky-scroll-container'>
       <ParallaxLayer speed={0} factor={.9}>
-          <div className={styles.one}>
+          <div className={styles.starry_sky}>
             <svg viewBox="0 0 1000 1000" height="100%" width="100%">
                 {radiuses.map(({ c, r, cy, cx, rotate }) => (
                         <circle
@@ -70,13 +70,12 @@ export function Background() {
           </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={.49} speed={.05} className={styles.content} factor={.25}>
-        <h2 className={styles.name}>Michael Young</h2>
-        <h3 className={styles.name}>Web Developer</h3>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={.3} speed={.05} factor={.4}>
+      <ParallaxLayer offset={.6} speed={.15} factor={.4}>
             <div className={styles.mountains} />
+            <div className={styles.content}>
+                <h2 className={styles.name}>Michael Young</h2>
+                <h3 className={styles.name}>Learner. Environmentalist. Web Engineer.</h3>
+            </div>
       </ParallaxLayer>
 
     </Parallax>
