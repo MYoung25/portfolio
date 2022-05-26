@@ -1,22 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Background } from "../components/background";
-import styles from "../styles/Home.module.css";
+import { StudyHall } from "../components/studyhall";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>MYoung.io</title>
         <meta name="description" content="Michael Young's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Background />
-
-      <main className={styles.main}>
-          Hello Main!
-      </main>
+      <Background>
+        <StudyHall />
+      </Background>
     </div>
   );
 };

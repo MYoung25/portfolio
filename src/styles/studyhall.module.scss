@@ -1,0 +1,17 @@
+$base-blue: rgba(238, 245, 251, 1);
+$base-red: #FBE2DE;
+$base-yellow: rgba(251, 239, 216, 1);
+
+.transition_container {
+    height: 155px;
+    background-image: url('/to-studyhall.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: $base-blue;
+}
+
+.container {
+    min-height: 200px;
+    background: $base-blue;
+}

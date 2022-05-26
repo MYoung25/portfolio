@@ -1,6 +1,7 @@
 .starry_sky {
     background: linear-gradient(#1D1F31, #3f446c);
     height: 100%;
+    overflow: hidden;
 }
 
 .mountains {
@@ -17,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    min-height: 200px;
+    min-height: 110px;
 }
 
 .name {
@@ -30,10 +31,28 @@
     .mountains {
         background-image: url('/mountains_long.svg'), url('/michael.webp');
     }
+
+    .starry_sky {
+        max-height: 97%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .starry_sky {
+        max-height: 99%;
+    }
+}
+
+@media (max-aspect-ratio: 12/10) and (min-width: 800px) {
+    .starry_sky {
+        max-height: 82%
+    }
 }
 
 @media screen and (min-width: 1000px) {
+
     .content {
-        min-height: 525px;
+        min-height: 225px;
     }
 }
