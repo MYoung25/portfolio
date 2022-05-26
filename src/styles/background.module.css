@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
-    min-height: 110px;
+    min-height: 130px;
 }
 
 .name {
@@ -33,26 +33,16 @@
     }
 
     .starry_sky {
-        max-height: 97%;
+        background: linear-gradient(#1D1F31, #3f446c 91%, #1D1F31 93%);
+
     }
     
 }
 
-@media screen and (min-width: 800px) {
-    .starry_sky {
-        max-height: 99%;
-    }
-}
-
-@media (max-aspect-ratio: 12/10) and (min-width: 800px) {
-    .starry_sky {
-        max-height: 82%
-    }
-}
 
 @media screen and (min-width: 1000px) {
 
     .content {
-        min-height: 225px;
+        /* min-height: 225px; */
     }
 }

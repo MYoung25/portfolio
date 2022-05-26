@@ -59,9 +59,9 @@ export function Background({ children }: { children?: JSX.Element }) {
 
   return (
     <Parallax ref={ref} pages={10} className="starry-sky-scroll-container">
-      <ParallaxLayer speed={0.1} factor={0.9}>
+      <ParallaxLayer speed={0.1} factor={1}>
         <div className={styles.starry_sky}>
-          <svg viewBox="0 0 1000 1000" height="100%" width="100%">
+          <svg viewBox="0 0 1000 1000" height="80%" width="100%">
             {radiuses.map(({ c, r, cy, cx, rotate }) => (
               <circle
                 r={r}
@@ -82,7 +82,7 @@ export function Background({ children }: { children?: JSX.Element }) {
         </div>
       </ParallaxLayer>
 
-      <ParallaxLayer offset={0.6} speed={0.3}>
+      <ParallaxLayer offset={0.6} speed={0.2}>
         <div className={styles.mountains} />
         <div className={styles.content}>
           <h2 className={styles.name}>Michael Young</h2>
