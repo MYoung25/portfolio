@@ -1,10 +1,12 @@
+$studyhall-blue: #061e44;
+$studyhall-red: rgb(240, 50, 50);
 $base-blue: rgba(238, 245, 251, 1);
 $base-red: #FBE2DE;
 $base-yellow: rgba(251, 239, 216, 1);
 
 .transition_container {
     height: 155px;
-    background-image: url('/to-studyhall.svg');
+    background-image: url('/studyhall/to-studyhall.svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -12,6 +14,57 @@ $base-yellow: rgba(251, 239, 216, 1);
 }
 
 .container {
+    position: relative;
+    top: -60px;
     min-height: 200px;
     background: $base-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $studyhall-blue;
+}
+
+.container::after {
+    content: "";
+    background-color: $base-blue;
+    background-image: url('/studyhall/to-studyhall.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    transform: rotate(.5turn);
+}
+
+.about {
+    width: 75%;
+    text-align: center;
+}
+
+.technologyUsed {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.stackIcon {
+    width: 50px;
+}
+
+.learnMore {
+    text-decoration: none;
+    border-bottom: 3px solid $studyhall-blue;
+    margin: 10px 0 5px 0;
+    padding-bottom: 2px;
+    transition: color .25s, border-color .25s;
+    &:hover {
+        color: $studyhall-red;
+        border-color: $studyhall-red;
+    }
+    &:active {
+        color: $studyhall-blue;
+    }
 }
