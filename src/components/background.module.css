@@ -4,16 +4,19 @@
 }
 
 .mountains {
-    background-image: url('/mountains_black_small.svg');
+    background-image: url('/mountains_black_small.svg'), url('/michael.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom;
+    background-position: bottom, bottom right;
     height: 200px;
 }
 
 .content {
     background-color: black;
     background-image: linear-gradient(#000, #1D1F31);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
     min-height: 200px;
 }
 
@@ -25,7 +28,7 @@
 
 @media screen and (min-width: 500px) {
     .mountains {
-        background-image: url('/mountains_long.svg');
+        background-image: url('/mountains_long.svg'), url('/michael.webp');
     }
 }
 

@@ -13,7 +13,7 @@ randomStars.forEach((number) => {
     });
 })
 
-export function Background ({ children }: { children: JSX.Element })  {
+export function Background ()  {
   const [scrollPosition, setScrollPosition] = useState(0);
   const ref = useRef(null);
 
@@ -77,8 +77,6 @@ export function Background ({ children }: { children: JSX.Element })  {
                 <h3 className={styles.name}>Learner. Environmentalist. Web Engineer.</h3>
             </div>
       </ParallaxLayer>
-
-      { children }
 
     </Parallax>
   );

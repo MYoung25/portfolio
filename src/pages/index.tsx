@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { Background } from '../components/background'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Background } from "../components/background";
+import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -12,13 +12,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Background>
-            <div>
-                Hello!
-            </div>
-        </Background>
-    </div>
-  )
-}
+      <Background />
 
-export default Home
+      <main className={styles.main}>
+          Hello Main!
+      </main>
+    </div>
+  );
+};
+
+export default Home;
