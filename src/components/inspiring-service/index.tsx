@@ -13,7 +13,7 @@ const stack = [
 
 export function InspiringService () {
     return (
-        <ParallaxLayer offset={2} speed={.3}>
+        <ParallaxLayer offset={2.2} speed={.3}>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <a href="https://inspiringservice.org/communities/" className={styles.logo}>

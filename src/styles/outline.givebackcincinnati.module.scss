@@ -1,15 +1,15 @@
 .dashed {
     border-left: 1px dashed white;
     margin-left: 20px;
+    height: 100%;
+    position: relative;
 }
 
 @mixin bullet {
     border-radius: 100px;
     border: 1px solid white;
-    position: relative;
-    
-    top: 20%;
-    margin-right: 20px;
+    position: absolute;
+    display: inline-block;
 }
 
 .openBullet {
@@ -29,4 +29,5 @@
 
 .content {
     margin-left: 30px;
+    height: 100%;
 }
