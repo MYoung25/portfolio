@@ -20,7 +20,7 @@ export function StudyHall () {
                         <img src="/studyhall/logo.svg" height="100px" width="400px" alt="StudyHall Logo" />
                     </a>
                     <p className={styles.about}>
-                        StudyHall offers free, virtual, one-on-one support through an Online Whiteboard tool to improve reading skills of students in need with qualified volunteer tutors. 
+                        StudyHall offers free, virtual, one-on-one support through a collaborative whiteboard tools to improve reading skills of students in need with qualified volunteer tutors. 
                     </p>
 
                     <a href="https://studyhall.org" className={styles.learnMore}>Learn More</a>

@@ -59,7 +59,7 @@ export function Background({ children }: { children?: JSX.Element[] }) {
   }
 
   return (
-    <Parallax ref={ref} pages={10} className="starry-sky-scroll-container">
+    <Parallax ref={ref} pages={3.8} className="starry-sky-scroll-container">
       <ParallaxLayer speed={0.1} factor={1}>
         <div className={styles.starry_sky}>
           <svg viewBox="0 0 1000 1000" height="100%" width="100%">
