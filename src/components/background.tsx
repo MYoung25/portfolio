@@ -20,7 +20,7 @@ randomStars.forEach((number) => {
   });
 });
 
-export function Background({ children }: { children?: JSX.Element }) {
+export function Background({ children }: { children?: JSX.Element[] }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const ref = useRef(null);
 

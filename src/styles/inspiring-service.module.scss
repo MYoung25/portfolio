@@ -1,0 +1,95 @@
+$app-background: #1D1F31;
+$bright-blue: rgba(69,163,244,1);
+
+.container {
+    background-color: #FFFFFF;
+    color: $app-background;
+}
+
+.container::after, .container::before {
+    content: "";
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 0 50px 0 0;
+    background-color: $app-background;
+}
+
+.container::before {
+    border-radius: 0 0 0 50px;
+}
+
+.container::after {
+    position: relative;
+    top: 1px;
+}
+
+.content {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission {
+    text-align: left;
+    width: 90%;
+    margin: inherit auto;
+    background-image: linear-gradient(270deg, $bright-blue 0%, rgba(17,119,194,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.descriptionHeader {
+    margin-bottom: 5px;
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.description {
+    width: 90%;
+    color: $app-background;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.technologyUsed {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.stackIcon {
+    width: 100px;
+    height: 60px;
+}
+
+.integrating {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+    .mission {
+        font-size: 64px;
+        width: 70%;
+    }
+
+    .description {
+        flex-basis: 100%;
+        width: 70%;
+        text-align: center;
+    }
+}

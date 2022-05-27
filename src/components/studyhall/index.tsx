@@ -25,9 +25,6 @@ export function StudyHall () {
 
                     <a href="https://studyhall.org" className={styles.learnMore}>Learn More</a>
 
-                    <h2>
-                        Stack
-                    </h2>
                     <div className={styles.technologyUsed}>
                         {
                             stack.map(({ src }) => (<img src={src} key={src} alt={src} className={styles.stackIcon} />))

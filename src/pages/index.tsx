@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Background } from "../components/background";
 import { StudyHall } from "../components/studyhall";
+import { InspiringService } from "../components/inspiring-service";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 
       <Background>
         <StudyHall />
+        <InspiringService />
       </Background>
     </div>
   );
