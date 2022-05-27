@@ -1,3 +1,4 @@
+import React from 'react'
 import { ParallaxLayer } from "@react-spring/parallax";
 import styles from '../../styles/inspiring-service.module.scss';
 
@@ -34,12 +35,12 @@ export function InspiringService () {
                                 const elem = <img src={src} key={src} alt={src} className={styles.stackIcon} />
 
                                 if (i === 3) {
-                                    return <>
+                                    return <React.Fragment key="integration">
                                         <h4 className={styles.integrating}>
                                             Integrated with:
                                         </h4>
                                         {elem}
-                                    </>
+                                    </React.Fragment>
                                 }
 
                                 return elem

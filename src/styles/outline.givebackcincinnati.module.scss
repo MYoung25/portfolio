@@ -1,0 +1,32 @@
+.dashed {
+    border-left: 1px dashed white;
+    margin-left: 20px;
+}
+
+@mixin bullet {
+    border-radius: 100px;
+    border: 1px solid white;
+    position: relative;
+    
+    top: 20%;
+    margin-right: 20px;
+}
+
+.openBullet {
+    @include bullet();
+    height: 35px;
+    width: 35px;
+    left: -19px;
+}
+
+.closedBullet {
+    @include bullet();
+    height: 10px;
+    width: 10px;
+    left: -6px;
+    background-color: #FFFFFF;
+}
+
+.content {
+    margin-left: 30px;
+}

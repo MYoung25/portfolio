@@ -1,3 +1,4 @@
+$app-background: #1D1F31;
 $studyhall-blue: #061e44;
 $studyhall-red: rgb(240, 50, 50);
 $base-blue: rgba(238, 245, 251, 1);
@@ -17,17 +18,22 @@ $base-yellow: rgba(251, 239, 216, 1);
 
 .container::before, .container::after {
     content: "";
-    background-color: $base-blue;
-    background-image: url('/studyhall/to-studyhall.svg');
+    background-image: url('/studyhall/to-studyhall.svg'), linear-gradient($app-background 10%, $base-blue 10.1%);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     height: 70px;
     width: 100%;
+    position: relative;
+}
+
+.container::before {
+    top: -5px;
 }
 
 .container::after {
     transform: rotate(.5turn);
+    top: 5px;
 }
 
 @media screen and (min-width: 400px) {

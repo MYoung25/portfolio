@@ -1,6 +1,6 @@
 import { useState, MutableRefObject, useEffect, useRef, useMemo } from "react";
 import GitHubButton from 'react-github-btn'
-import styles from "../styles/background.module.css";
+import styles from "../styles/background.module.scss";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import randomStars from "./randomStars.json";
 
@@ -62,7 +62,7 @@ export function Background({ children }: { children?: JSX.Element[] }) {
     <Parallax ref={ref} pages={10} className="starry-sky-scroll-container">
       <ParallaxLayer speed={0.1} factor={1}>
         <div className={styles.starry_sky}>
-          <svg viewBox="0 0 1000 1000" height="80%" width="100%">
+          <svg viewBox="0 0 1000 1000" height="100%" width="100%">
             {radiuses.map(({ c, r, cy, cx, rotate }) => (
               <circle
                 r={r}
@@ -81,19 +81,18 @@ export function Background({ children }: { children?: JSX.Element[] }) {
             ))}
           </svg>
         </div>
-      </ParallaxLayer>
-
-      <ParallaxLayer offset={0.6} speed={0.2}>
-        <div className={styles.mountains} />
-        <div className={styles.content}>
-          <h2 className={styles.name}>
-                <span>Michael Young</span>
-                <GitHubButton href="https://github.com/MYoung25" aria-label="@MYoung25 on GitHub">@MYoung25</GitHubButton>
-          </h2>
-          <h3 className={styles.tagline}>
-            Learner. Environmentalist. Web Engineer.
-          </h3>
-        </div>
+          <div className={styles.businessCard}>
+            <div className={styles.mountains} />
+            <div className={styles.content}>
+            <h2 className={styles.name}>
+                    <span>Michael Young</span>
+                    <GitHubButton href="https://github.com/MYoung25" aria-label="@MYoung25 on GitHub">@MYoung25</GitHubButton>
+            </h2>
+            <h3 className={styles.tagline}>
+                Learner. Environmentalist. Web Engineer.
+            </h3>
+            </div>
+          </div>
       </ParallaxLayer>
 
       {children}
