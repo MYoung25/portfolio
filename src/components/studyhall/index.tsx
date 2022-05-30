@@ -1,4 +1,3 @@
-import { ParallaxLayer } from "@react-spring/parallax"
 import styles from '../../styles/studyhall.module.scss'
 
 const stack = [
@@ -14,7 +13,7 @@ const stack = [
 export function StudyHall () {
     return (
         <>
-            <ParallaxLayer offset={1} speed={.05}>
+            <div>
                 <div className={styles.container}>
                     <a href="https://studyhall.org">
                         <img src="/studyhall/logo.svg" height="100px" width="400px" alt="StudyHall Logo" />
@@ -32,7 +31,7 @@ export function StudyHall () {
                     </div>
 
                 </div>
-            </ParallaxLayer>
+            </div>
         </>
     )
 }

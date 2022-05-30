@@ -1,7 +1,6 @@
 import { useState, MutableRefObject, useEffect, useRef, useMemo } from "react";
 import GitHubButton from 'react-github-btn'
 import styles from "../styles/background.module.scss";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import randomStars from "./randomStars.json";
 
 let radiuses: {
@@ -22,21 +21,13 @@ randomStars.forEach((number) => {
 
 export function Background({ children }: { children?: JSX.Element[] }) {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const ref = useRef(null);
 
   const handleScroll = () => {
-    let { current } = ref;
-    if (current && (current as MutableRefObject<null>).current) {
-      setScrollPosition(
-        (current as MutableRefObject<null>).current as unknown as number
-      );
-    }
+    setScrollPosition(window.scrollY);
   };
 
   useEffect(() => {
-    const container: HTMLElement | null = document.querySelector(
-      ".starry-sky-scroll-container"
-    );
+    const container: Window = window
     if (container) {
       container.addEventListener("scroll", handleScroll);
       return () => {
@@ -59,8 +50,8 @@ export function Background({ children }: { children?: JSX.Element[] }) {
   }
 
   return (
-    <Parallax ref={ref} pages={3.8} className="starry-sky-scroll-container">
-      <ParallaxLayer speed={0.1} factor={1}>
+    <div>
+      <div>
         <div className={styles.starry_sky}>
           <svg viewBox="0 0 1000 1000" height="100%" width="100%">
             {radiuses.map(({ c, r, cy, cx, rotate }) => (
@@ -93,9 +84,9 @@ export function Background({ children }: { children?: JSX.Element[] }) {
             </h3>
             </div>
           </div>
-      </ParallaxLayer>
+      </div>
 
       {children}
-    </Parallax>
+    </div>
   );
 }

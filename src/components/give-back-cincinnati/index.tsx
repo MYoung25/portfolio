@@ -1,19 +1,15 @@
-import { ParallaxLayer } from "@react-spring/parallax"
 import { Outline } from './outline'
 import styles from '../../styles/givebackcincinnati.module.scss'
 
 export function GiveBackCincinnati () {
     return (
-        <>
-            <ParallaxLayer offset={2.8} speed={.2} factor={.8}>
+        <div className={styles.outerContainer}>
+            <div>
                 <Outline>
                     <div className={styles.transition} />
                 </Outline>
-            </ParallaxLayer>
-            <ParallaxLayer
-                offset={3.2}
-                speed={.3}
-            >
+            </div>
+            <div>
                 <div className={styles.contentContainer}>
                     <Outline>
                         <div className={styles.content}>
@@ -48,7 +44,7 @@ export function GiveBackCincinnati () {
                         </div>
                     </Outline>
                 </div>
-            </ParallaxLayer>
-        </>
+            </div>
+        </div>
     )
 }

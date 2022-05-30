@@ -1,5 +1,4 @@
 import React from 'react'
-import { ParallaxLayer } from "@react-spring/parallax";
 import styles from '../../styles/inspiring-service.module.scss';
 
 const stack = [
@@ -13,7 +12,7 @@ const stack = [
 
 export function InspiringService () {
     return (
-        <ParallaxLayer offset={2.2} speed={.3}>
+        <div>
             <div className={styles.container}>
                 <div className={styles.content}>
                     <a href="https://inspiringservice.org/communities/" className={styles.logo}>
@@ -50,6 +49,6 @@ export function InspiringService () {
 
                 </div>
             </div>
-        </ParallaxLayer>
+        </div>
     )
 }

@@ -36,7 +36,7 @@ $base-yellow: rgba(251, 239, 216, 1);
     top: 5px;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
     .container::before, .container::after {
         height: 160px;
     }
