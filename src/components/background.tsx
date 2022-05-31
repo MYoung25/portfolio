@@ -1,4 +1,4 @@
-import { useState, MutableRefObject, useEffect, useRef, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import GitHubButton from 'react-github-btn'
 import styles from "../styles/background.module.scss";
 import randomStars from "./randomStars.json";
