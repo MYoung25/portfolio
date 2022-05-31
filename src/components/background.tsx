@@ -80,7 +80,7 @@ export function Background({ children }: { children?: JSX.Element[] }) {
                     <GitHubButton href="https://github.com/MYoung25" aria-label="@MYoung25 on GitHub">@MYoung25</GitHubButton>
             </h2>
             <h3 className={styles.tagline}>
-                Learner. Environmentalist. Web Engineer.
+                Learner. Problem Solver. Implementor.
             </h3>
             </div>
           </div>
